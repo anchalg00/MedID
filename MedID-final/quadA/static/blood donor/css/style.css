@@ -1,0 +1,44 @@
+
+header div{
+	background-color: #CD5C5C ;
+	height: 50px;
+	color: #ECF0F1 ;
+  padding-right: 0px;
+
+	font-size: 25px;
+
+}
+footer div{
+  background-color: #CD5C5C ;
+  height: 50px;
+  color: #ECF0F1 ;
+  font-size: 25px;
+
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #CD5C5C;
+  border-color: #CD5C5C;
+}
+.blood_donor{
+	margin-top: 100px;
+	margin-right: 300px;
+	margin-left: 300px;
+}
+
+.box2{
+margin-bottom: 0px;
+ padding-left: 0px;
+ margin-left: 0px;
+ padding-bottom: 0px;
+}
+
+body{
+background-image: url(../images/pexels-photo-247786.jpeg);
+	}
+
+
+.box1{
+ margin-bottom: 0px;    
+  }

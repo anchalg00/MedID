@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doctor's Portal</title>
+    <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/style.css' %}">
+    
+
+    <style>
+      .navbar{
+        margin-bottom:0;
+        border-radius:0;
+      }
+    </style>
+  </head>
+  <body>
+  <header>
+  <div > <p style="margin-right: 20px; margin-left: 70px;"><strong>MedID </strong><small> (A project on patient's Medical History)</small> <a href="home.html" class="btn btn-primary float-right" style="margin-top: 5px;"><strong>Logout</strong></a></p>
+  </div>
+  </header>  
+    <div class="container-fluid box2">
+    <div class="row ">
+        <div class="col-md-3 container-fluid ">
+          <div class="jumbotron text-center box1">
+            <div>
+              <h1 style="color:black"><strong>Doctor's Portal</strong></h1>
+              <br/>
+          
+              <ul class="nav flex-column ">
+                <div class="text-left ">
+                  <hr>
+                <li><a href="#" style="color:#CD5C5C"><strong>View Patient's History</strong></a></li>
+                <hr>
+                <li><a href="#" style="color:#CD5C5C"><strong>View Previous Prescriptions</strong></a></li>
+                <hr>
+                <li><a href="#" style="color:#CD5C5C"><strong>View Previous Reports/X-Ray</strong></a></li>
+                <hr>
+                <li><a href="#" style="color:#CD5C5C"><strong>Update Presciption</strong></a></li>
+                <hr>
+                <li><a href="#" style="color:#CD5C5C"><strong>Update Report/X-Ray</strong></a></li>
+                <hr>
+                <li><a href="#" style="color:#CD5C5C"><strong>Update Body Analysis</strong></a></li>
+                
+                <hr>
+                
+                </div>
+                
+              </ul>
+              <br>
+              <br>
+              <br>
+              <hr>
+              <form action="scan-qrcode/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                  <label> <div class="text-left" style="color:#CD5C5C;margin-left:55px"><strong>Upload MedID</strong></div>
+                    
+                  
+
+                   <br><input type="file" name='image' > <br><br><input id="Upload" type="submit" class="btn btn-light float-left" value='Submit'style="margin-left:70px;background-color:#CD5C5C ;color: white;">
+                   </label> 
+              </form>
+              <hr>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 c2">
+        <div class="jumbotron text-center signin ">
+            <div>
+            
+              <form>
+              <div class="form-group">
+                <h2 style="color:black"><strong>Patient ID</strong></h2>
+                <br>
+                <input type="text" class="form-control" placeholder="Enter the patient's ID">
+              </div>
+              </form>
+              <br>
+              <br>
+              <a href="#" class="btn btn-primary">Login</a>
+              <br>
+              
+            </div>
+        </div>  
+  
+        
+    </div>
+  </div>
+
+
+
+        
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+  </body>
+</html>

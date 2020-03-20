@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blood Donor's Portal</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static '/blood donor/css/style.css' %}"
+    />
+
+    <style>
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="container">
+          <strong>QuadA ---- </strong>Look for a nearby blood donor
+        </p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="jumbotron text-center blood_donor ">
+        <div>
+          <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <h4>Blood Group :</h4>
+              <input
+                type="text"
+                placeholder="O+"
+                name="blood_group"
+              /><br /><br />
+              <h4>Pincode :</h4>
+              <input
+                type="text"
+                placeholder="110070"
+                name="pincode"
+              /><br /><br />
+              <h4>Locality :</h4>
+              <input
+                type="text"
+                placeholder="Vasantkunj"
+                name="locality"
+              /><br /><br />
+
+              <input type="submit" value="submit" class="btn btn-primary" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      {% if length != 0 %}
+      <div class="jumbotron blood_donor">
+        {% for query in query_set %}
+        <h5>{{ forloop.counter }}</h5>
+        <h5>Name: {{ query.name }}</h5>
+        <h5>Email: {{ query.email }}</h5>
+        <br />
+        <br />
+        {% endfor %}
+      </div>
+
+      {% endif %}
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

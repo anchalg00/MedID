@@ -1,0 +1,21 @@
+header div{
+	background-color: #CD5C5C ;
+	height: 50px;
+	color: #ECF0F1 ;
+	font-size: 25px;
+
+}
+header div p{
+	padding-top: 5px;
+}
+.signup{
+
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 50px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #CD5C5C;

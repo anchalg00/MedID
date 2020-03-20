@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>View Medical History</title>
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'fancybox-master/dist/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'patient/css/login-pe-update.css' %}">
+    
+
+    <style>
+      .navbar{
+        margin-bottom:0;
+        border-radius:0;
+      }
+    </style>
+  </head>
+  <body>
+ <header>
+        <div>
+            <p style="margin-right: 20px; margin-left: 70px;"><strong>MedID </strong><small> (A project on patient's Medical History)</small> <a href="home.html" class="btn btn-primary float-right" style="margin-top: 5px;"><strong>Logout</strong></a></p>
+        </div>
+    </header> 
+    <div class="container-fluid box2">
+        <div class="row ">
+            <div class="col-md-3 container-fluid ">
+                <div class="jumbotron text-center box1">
+                    <div>
+                        <h1 style="color:black"><strong>Patient's Portal</strong></h1>
+                        <br />
+
+                        <ul class="nav flex-column ">
+                            <div class="text-left ">
+                                <hr>
+                                <li><a href="../update-medical-history/" style="color:#CD5C5C"><strong>Update Medical History</strong></a></li>
+                                <hr>
+                                <li><a href="../summary/" style="color:#CD5C5C"><strong>View Medical History</strong></a></li>
+                                <hr>
+                                <li><a href="../view-prescription/" style="color:#CD5C5C"><strong>View Prescription</strong></a></li>
+                                <hr>
+                                <li><a href="../view-report/" style="color:#CD5C5C"><strong>View Reports/X-rays</strong></a></li>
+                                <hr>
+                                <li><a href="../../pneumonia-check/" style="color:#CD5C5C"><strong>AI's Opinion on X-Ray</strong></a></li>
+                                <hr>
+                                <li><a href="#" style="color:#CD5C5C"><strong>Go to Pharmeasy</strong></a></li>
+                                <hr>
+
+                            </div>
+
+                        </ul>
+                        <br>
+                        <br>
+                        <a href="generate-qrcode/" class="btn btn-primary"><strong>Generate your MedID</strong></a>
+                        <br>
+                        <br>
+                        <a href="#" class="btn btn-primary"><strong>Apply for Mediclaim</strong></a>
+                        
+                    
+
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-9 c2">
+        <div class="jumbotron text-center signup ">
+            <div>
+        	<div class="container signup">
+        		<h1 style="color: black;">PATIENT SUMMARY</h1><b4><br>
+              <div id="summarybox" style="padding-top: 30px;">
+                <p style="font-size: 20px">
+                  Name: {{name}} 
+                  <br>
+                  Height: {{height}}
+                  <br>
+                  Weight: {{weight}}
+                  <br>
+                  {% if illness %}
+                  Illness: {{illness}}
+                  <br>
+
+                  {% else %}
+                  Illness: None
+                  <br>
+                  {% endif %}
+                
+                  {% if other_illness %}
+                  Other Illness: {{other_illness}}
+                  <br>
+
+                  {% else %}
+                  Other Illness: None
+                  <br>
+                  {% endif %}
+                  
+
+                  {% if allergy %}
+                  Allergy: {{allergy}}
+                  <br>
+
+                  {% else %}
+                  Allergy: None
+                  <br>
+                  {% endif %}
+
+                  {% if other_allergy %}
+                  Other Allergy: {{other_allergy}}
+                  <br>
+
+                  {% else %}
+                  Other Allergy: None
+                  <br>
+                  {% endif %}
+
+                  {% if medication %}
+                  Medication: {{medication}}
+                  <br>
+
+                  {% else %}
+                  Medication: None
+                  <br>
+                  {% endif %}
+                </p>
+                <img src="../../static/img2.png" >
+                <br>
+                <br>
+                <img src=" ">
+              </div>
+
+              
+            </div>
+        </div>  
+  
+        
+    </div>
+  </div>
+
+
+
+        
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>  
+ 
+  <script type="text/javascript" src="{% static 'fancybox-master\dist\jquery.fancybox.min.js' %}"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>

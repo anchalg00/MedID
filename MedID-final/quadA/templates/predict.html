@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pneumonia Diagnoser</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'home/css/style.css' %}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="container"><strong>QuadA-----</strong>Prediction</p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="jumbotron">
+        <div style="width: 90%; margin: auto; text-align: center">
+          <h3 style="margin-top: 40px">
+            <b
+              >Predicted Label:
+              <span style="color: green">{{ prediction }}</span></b
+            >
+          </h3>
+          <h3>
+            <b
+              >Accuracy : <span style="color: green;">{{ accuracy }} %</span></b
+            >
+          </h3>
+          <!-- <a href="/">Back to Home</a> -->
+          <a href="/" class="btn btn-info" role="button">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

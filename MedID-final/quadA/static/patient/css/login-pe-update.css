@@ -1,0 +1,102 @@
+header div {
+  background-color: #cd5c5c;
+  height: 50px;
+  color: #ecf0f1;
+  padding-right: 0px;
+
+  font-size: 25px;
+}
+footer div {
+  background-color: #cd5c5c;
+  height: 50px;
+  color: #ecf0f1;
+  font-size: 25px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #cd5c5c;
+  border-color: #cd5c5c;
+}
+.signin {
+  margin-top: 200px;
+  margin-right: 300px;
+  margin-left: 300px;
+}
+
+.box2 {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  padding-bottom: 0px;
+}
+
+body {
+  background-image: url(../images/pexels-photo-247786.jpeg);
+}
+
+.box1 {
+  margin-bottom: 0px;
+}
+header div {
+  background-color: #cd5c5c;
+  height: 50px;
+  color: #ecf0f1;
+  font-size: 25px;
+}
+header div p {
+  padding-top: 5px;
+}
+.signup {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #cd5c5c;
+}
+
+h3 {
+  background-color: #cd5c5c;
+  color: white;
+  font-size: 20px;
+}
+#summarybox {
+  height: 500px;
+}
+label {
+  padding: 10px;
+  margin-left: 100px;
+  background: #cd5c5c;
+  display: table;
+  color: #fff;
+}
+
+input[type="file"] {
+  padding-left: 20px;
+}
+input[type="date"] {
+  padding-left: 20px;
+}
+.btn-light {
+  color: #212529;
+  background-color: #fff;
+  border-color: #f8f9fa;
+  height: 30px;
+  font-size: 12px;
+  font: icon;
+}
+img {
+  height: 200px;
+  width: 200px;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+  height: 1050px;
+}

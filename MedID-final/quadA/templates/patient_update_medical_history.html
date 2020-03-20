@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update Medical History</title>
+    <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'patient/css/login-pe-update.css' %}">
+    
+
+    <style>
+      .navbar{
+        margin-bottom:0;
+        border-radius:0;
+      }
+    </style>
+  </head>
+  <body>
+  <header>
+        <div>
+            <p style="margin-right: 20px; margin-left: 70px;"><strong>MedID </strong><small> (A project on patient's Medical History)</small> <a href="home.html" class="btn btn-primary float-right" style="margin-top: 5px;"><strong>Logout</strong></a></p>
+        </div>
+    </header>
+    <div class="container-fluid box2">
+        <div class="row ">
+            <div class="col-md-3 container-fluid ">
+                <div class="jumbotron text-center box1">
+                    <div>
+                        <h1 style="color:black"><strong>Patient's Portal</strong></h1>
+                        <br />
+
+                        <ul class="nav flex-column ">
+                            <div class="text-left ">
+                                <hr>
+                                <li><a href="../update-medical-history/" style="color:#CD5C5C"><strong>Update Medical History</strong></a></li>
+                                <hr>
+                                <li><a href="../summary/" style="color:#CD5C5C"><strong>View Medical History</strong></a></li>
+                                <hr>
+                                <li><a href="../view-prescription/" style="color:#CD5C5C"><strong>View Prescription</strong></a></li>
+                                <hr>
+                                <li><a href="../view-report/" style="color:#CD5C5C"><strong>View Reports/X-rays</strong></a></li>
+                                <hr>
+                                <li><a href="../../pneumonia-check/" style="color:#CD5C5C"><strong>AI's Opinion on X-Ray</strong></a></li>
+                                <hr>
+                                <li><a href="#" style="color:#CD5C5C"><strong>Go to Pharmeasy</strong></a></li>
+                                <hr>
+
+                            </div>
+
+                        </ul>
+                        <br>
+                        <br>
+                        <a href="generate-qrcode/" class="btn btn-primary"><strong>Generate your MedID</strong></a>
+                        <br>
+                        <br>
+                        <a href="#" class="btn btn-primary"><strong>Apply for Mediclaim</strong></a>
+                        
+                    
+
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-9 c2">
+          <div class="jumbotron text-center signup ">
+            <div>
+              <div class="container signup">
+                <h1>Update Your Medical ID</h1>
+                <b4><br>
+              </div>
+        
+              <form method="POST">
+                {% csrf_token %}
+                <div style="display: None">
+                  <h3>Height</h3>
+                  <input type="email" name="email"> <br>
+                </div>
+                <div style="display: None">
+                  <h3>Date</h3>
+                  <input type="text" name="date"> <br>
+                </div>
+                <div class="form-group">
+                  <h3>Height</h3>
+                  <input type="text" name="height" step=".01"> <br>
+                </div>
+                <div class="form-group">
+                  <h3>Weight-in Kgs</h3>
+                  <input type="text" name="weight" step=".1"> <br>
+                </div>
+                <div class="form-group">
+                  <h3>Please tick if you suffer from any of these illnesses</h3>
+                  <br>
+                  <input type="checkbox" name="illness_cancer"> Cancer<br>
+                  <input type="checkbox" name="illness_aids"> AIDS<br>
+                  <input type="checkbox" name="illness_heart_disease"> Heart Disease<br>
+                  <input type="checkbox" name="illness_diabetes"> Diabetes<br>
+                  <input type="checkbox" name="illness_asthma"> Asthma<br>
+                  <input type="checkbox" name="illness_renal_dialysis"> Renal dialysis<br>
+        
+                </div>
+                <div class="form-group">
+                  <h3>Any Other Illness</h3>
+                  <textarea class="form-control" placeholder="Please mention if you suffer from any other Illness"
+                    name="other_illness"></textarea>
+                </div>
+        
+                <div class="form-group">
+                  <h3>Please tick if you suffer from any of these illnesses</h3>
+                  <br>
+                  <input type="checkbox" name="allergy_pollen"> Pollen<br>
+                  <input type="checkbox" name="allergy_dust"> Dust Mites<br>
+                  <input type="checkbox" name="allergy_nuts"> Nuts<br>
+                  <input type="checkbox" name="allergy_dairy"> Dairy <br>
+                  <input type="checkbox" name="allergy_wheat"> Wheat<br>
+        
+                </div>
+                <div class="form-group">
+                  <h3>Any Other Allergies</h3>
+                  <textarea class="form-control" placeholder="Please mention if you suffer from any other Allergies"
+                    name="other_allergy"></textarea>
+                </div>
+                <div class="form-group">
+                  <h3>Ongoing Medication</h3>
+                  <textarea class="form-control" placeholder="Please mention if you are currently on any medication"
+                    name="medication"></textarea>
+                </div>
+        
+                <div class="form-group">
+                  <input type="submit" value="Update" class="btn btn-primary">
+                </div>
+        
+              </form>
+        
+        
+            </div>
+          </div>
+        
+        
+        </div>
+  </div>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>        
+<script type="text/javascript">
+  var titles=[];
+  var titleinput=document.getElementById("height");
+  var messageBox = document.getElementById("display");
+  function insert()
+  {
+    console.log(titleinput.value);
+    
+    messageBox.innerHTML="";
+    messageBox.innerHTML+=titleinput.value;
+ 
+  }
+  $("#prospects_form").submit(function(e) {
+    e.preventDefault();
+});
+  
+</script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+  </body>
+</html>

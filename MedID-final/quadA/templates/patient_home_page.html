@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Patient's Portal</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/style.css' %}">
+    {% endblock css %}
+
+    <style>
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <p style="margin-right: 20px; margin-left: 70px;"><strong>MedID </strong><small> (A project on patient's Medical History)</small> <a href="home.html" class="btn btn-primary float-right" style="margin-top: 5px;"><strong>Logout</strong></a></p>
+        </div>
+    </header>
+    <div class="container-fluid box2">
+        <div class="row ">
+            <div class="col-md-3 container-fluid ">
+                <div class="jumbotron text-center box1">
+                    <div>
+                        <h1 style="color:black"><strong>Patient's Portal</strong></h1>
+                        <br />
+
+                        <ul class="nav flex-column ">
+                            <div class="text-left ">
+                                <hr>
+                                <li><a href="update-medical-history/" style="color:#CD5C5C"><strong>Update Medical History</strong></a></li>
+                                <hr>
+                                <li><a href="summary/" style="color:#CD5C5C"><strong>View Medical History</strong></a></li>
+                                <hr>
+                                <li><a href="view-prescription/" style="color:#CD5C5C"><strong>View Prescription</strong></a></li>
+                                <hr>
+                                <li><a href="view-report/" style="color:#CD5C5C"><strong>View Reports/X-rays</strong></a></li>
+                                <hr>
+                                <li><a href="../pneumonia-check/" style="color:#CD5C5C"><strong>AI's Opinion on X-Ray</strong></a></li>
+                                <hr>
+                                <li><a href="www.pharmeasy.com" style="color:#CD5C5C"><strong>Go to Pharmeasy</strong></a></li>
+                                <hr>
+
+                            </div>
+
+                        </ul>
+                        <br>
+                        <br>
+                        <a href="generate-qrcode/" class="btn btn-primary"><strong>Generate your MedID</strong></a>
+                        <br>
+                        <br>
+                        <a href="#" class="btn btn-primary"><strong>Apply for Mediclaim</strong></a>
+                        
+                    
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-9 c2">
+  <div class="jumbotron text-center signin ">
+    <div>
+      <h1 style="color:black">
+        <strong>Welcome {{ name }}!</strong>
+      </h1>
+      <div class="text-left">
+        <br />
+        <p style="color:#CD5C5C">
+          <strong
+            >Here you can update, view or check for various other features like
+            pneumonia detection , blood donor, book a doctor's
+            appointment</strong
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+
+
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

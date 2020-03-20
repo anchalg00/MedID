@@ -1,0 +1,48 @@
+header div {
+  background-color: #cd5c5c;
+  height: 50px;
+  color: #ecf0f1;
+  font-size: 25px;
+}
+header div p {
+  padding-top: 5px;
+}
+
+.jumbotron-billboard {
+  margin-bottom: 0px;
+  opacity: 0.5;
+}
+.jumbotrons {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #fff;
+  margin-top: 50px;
+  height: 700px;
+  text-align: left;
+  padding-left: 25px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #cd5c5c;
+  border-color: #cd5c5c;
+}
+.midContent {
+  padding-top: 20px;
+}
+body {
+  background-image: url(../images/pexels-photo-247786.jpeg);
+}
+.XRay {
+  
+/*  background-color:#eee;*/
+  border-radius: 10px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color:black;
+
+      height: 560px;
+}
+.login {
+  background-color: #fadbd8;
+}

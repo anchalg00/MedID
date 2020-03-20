@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MedID</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'home/css/style.css' %}"
+    />
+  </head>
+  <body>
+    <header>
+      <div><p class="container"><strong>MedID</strong><small>  (A project on patient's Medical History)</small></p></div>
+    </header>
+    <div class="container midContent">
+      <div class="row">
+        <div class="col-md-8 XRay" style="">
+          <div class="jumbotrons ">
+            <h1 class="display-3 " style="color:#CD5C5C;"><strong>MedID</strong></h1>
+            <h3 style="color: black;">
+              We are a team of students dedicated to improving the quality of
+              health-care in our country. It is very difficult to track a
+              patient's medical history and thus we create a WebApp which allows
+              Doctors,Testing Labs to see a patients Medical History, it also gives you access 
+              to many other features.
+            </h3>
+            <br />
+            <p>
+              <a
+                class="btn btn-primary btn-lg"
+                href="/pneumonia-check/"
+                role="button"
+              >
+                Know More >>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <div class="jumbotron text-center login">
+            <div>
+              <!--<h1 style>LOGIN</h1>-->
+              <form action="/login/" method="POST">
+                {% csrf_token %}
+                <div class="form-group akshay">
+                  <h2>Email</h2>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter your Email"
+                    name="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <h2>Password</h2>
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Enter your Password"
+                    name="password"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <h2>User</h2>
+                  <input
+                    type="radio"
+                    name="occupation"
+                    value="Patient"
+                  />Patient
+                  <input type="radio" name="occupation" value="Doctor" />Doctor
+                  <input type="radio" name="occupation" value="T Lab" />Test
+                  Lab
+                  <br />
+                  <input
+                    type="radio"
+                    name="occupation"
+                    value="Medical Insurance"
+                  />Medical Insurance
+                </div>
+
+                <input type="submit" value="Login" class="btn btn-primary" />
+              </form>
+              <br />
+              <br />
+              <p>Do not have an account? <a href="/sign-up/"> Sign Up</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-md">
+        
+        <div class="col-md-4">
+          <div class="jumbotron text-center">
+          <div class="container">
+            
+          <h1>X-ray Consultion</h1>
+          <p>Check if you have <strong><em>Pneumonia</em></strong> and get 90% accurate result</p>
+          <a href="#" class="btn btn-primary">Upload</a>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="jumbotron text-center">
+          <div class="container">
+            
+          <h1>Find a Blood Donor</h1>
+          <p>Want a blood donor nearby? <strong>Click Below</strong> and enter few basic details</p>
+          <a href="blood-donor/" class="btn btn-primary">Find</a>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="jumbotron text-center">
+          <div class="container">
+            
+          <h1>Nearby Doctor</h1>
+          <p>Looking for nearby Doctor with a <strong>particular Speciality</strong> just click below! </p>
+          <a href="#" class="btn btn-primary">Find</a>
+          </div>
+          </div>
+        </div>
+      
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
